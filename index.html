@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 5 - Registration</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/Fonts.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/globle.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.responsive.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+        />
+      </symbol>
+      <symbol id="info-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+        />
+      </symbol>
+      <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+        />
+      </symbol>
+    </svg>
+    <section id="Registration" class="py-5">
+      <div class="container text-center text-light">
+        <img src="images/logo.png" alt="logo" class="img-fluid mb-5" />
+        <div class="box py-4 px-3 rounded-4">
+          <h2 class="mb-4 h3">Students System</h2>
+          <form data-type="add">
+            <button class="btn btn-danger btn-clear" onclick="resetForm()">
+              Clear
+            </button>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <input
+                data-valid="false"
+                type="text"
+                required
+                class="form-control"
+                placeholder="FirstName *"
+                name="firstName"
+                autocomplete="off"
+              />
+            </div>
+            <p class="alert alert-danger text-start d-none" role="alert"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <input
+                data-valid="false"
+                type="text"
+                required
+                class="form-control"
+                placeholder="LastName *"
+                name="lastName"
+                autocomplete="off"
+              />
+            </div>
+            <p class="alert alert-danger text-start d-none" role="alert"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <input
+                data-valid="false"
+                type="email"
+                required
+                class="form-control"
+                placeholder="Email *"
+                name="email"
+                autocomplete="off"
+              />
+            </div>
+            <p class="alert alert-danger text-start d-none" role="alert"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-hashtag"></i>
+              </span>
+              <input
+                data-valid="false"
+                type="number"
+                min="1"
+                required
+                class="form-control"
+                placeholder="Age *"
+                name="age"
+                autocomplete="off"
+              />
+            </div>
+            <p class="alert alert-danger text-start d-none" role="alert"></p>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <input
+                data-valid="false"
+                type="tel"
+                required
+                class="form-control"
+                placeholder="Phone *"
+                name="phone"
+                autocomplete="off"
+              />
+            </div>
+            <p class="alert alert-danger text-start d-none" role="alert"></p>
+
+            <button class="btn-add btn btn-success w-100">Add</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="Filter" class="pb-5">
+      <div class="container">
+        <div class="input-group mb-2 w-25 mx-auto">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search..."
+            name="search"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="DataStudent" class="pb-5">
+      <p
+        class="warning w-75 mx-auto rounded-1 overflow-hidden py-3 text-center"
+      >
+        There are no data
+      </p>
+
+      <div class="cover overflow-auto">
+        <table class="table w-75 mx-auto rounded-1 overflow-hidden">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              <th scope="col">Email</th>
+              <th scope="col">Age</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    
+    <div id="popupDelete" class="text-light">
+      <div class="container d-flex justify-content-center align-items-center h-100">
+        <div class="box p-4 rounded-3">
+          <div class="head-model">
+            <h4 class="">Delete</h4>
+            <i class="fa-solid fa-xmark close-model" onclick="CloseModelDelete()"></i>
+          </div>
+          <div class="content-model">
+            <p class="m-0">Are You Sure ?</p>
+          </div>
+          <div class="buttons-model">
+            <button class="btn btn-secondary me-2" onclick="CloseModelDelete()">
+              Discard
+            </button>
+            <button class="btn btn-danger" id="btnDelete">
+              Yes, Delete
+            </button>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="popupEdit" class="text-light">
+      <div
+        class="container d-flex justify-content-center align-items-center h-100"
+      >
+        <div class="box p-4 rounded-3">
+          <div class="head-model">
+            <h4 class="">Edit</h4>
+            <i
+              class="fa-solid fa-xmark close-modelEdit"
+              onclick="CloseModelEdit()"
+            ></i>
+          </div>
+          <div class="content-model">
+            <p class="m-0">Are You Sure ?</p>
+          </div>
+          <div class="buttons-model">
+            <button class="btn btn-secondary me-2" onclick="CloseModelEdit()">
+              Discard
+            </button>
+            <button class="btn btn-info text-light" id="btnEdit">Yes, Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/globle.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

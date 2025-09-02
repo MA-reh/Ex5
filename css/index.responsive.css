@@ -1,0 +1,17 @@
+@media (max-width: 1300px) {
+    table {
+        width: max-content;
+    }
+}
+
+@media (min-width: 371px) and (max-width: 1300px) {}
+
+@media (min-width: 576px) and (max-width: 1300px) {}
+
+@media (min-width: 768px) and (max-width: 1300px) {}
+
+@media (min-width: 992px) and (max-width: 1300px) {}
+
+@media (min-width: 1200px) and (max-width: 1300px) {}
+
+@media (min-width: 1299px) and (max-width: 1400px) {}
