@@ -137,12 +137,10 @@ function addStudent() {
 function openModelDelete(id, that) {
   popupModelDelete.classList.add("active");
 
-  /*   btnDelete.onclick = function () {
-    deleteStudent(id, that);
-  }; */
   btnDelete.onclick = function (value) {
     if (value) {
       that.parentElement.parentElement.remove();
+      popupModelDelete.classList.remove("active");
 
       students = students.filter((student) => {
         return student.id != id;
@@ -150,7 +148,7 @@ function openModelDelete(id, that) {
 
       checkStudents(students);
 
-      // updateLocalStorage();
+      updateLocalStorage();
     } else {
     }
   };

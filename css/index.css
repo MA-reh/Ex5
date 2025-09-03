@@ -7,6 +7,7 @@ body {
     background: -webkit-linear-gradient(to right, #243B55, #141E30);
     background: linear-gradient(to right, #243B55, #141E30);
     /* height: 6000px; */
+    overflow: auto;
 }
 
 #Registration .box {
@@ -48,6 +49,10 @@ i {
     height: 25px;
 }
 
+#Filter .input-group {
+    width: 300px;
+}
+
 #DataStudent>p {
     background-color: #FFF3CD;
     color: #664D03;
@@ -83,8 +88,8 @@ tr {
 
 #popupEdit .box ,
 #popupDelete .box {
-    background-color: #232323;
     width: 400px;
+    background-color: #232323;
     /* height: 225px; */
 }
 

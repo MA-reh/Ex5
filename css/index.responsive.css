@@ -2,6 +2,22 @@
     table {
         width: max-content;
     }
+
+    #Registration form .btn-clear {
+        position: absolute;
+        top: -115px;
+        right: 0px;
+    }
+
+    #Registration .box {
+        width:
+            300px;
+    }
+
+    #popupEdit .box,
+    #popupDelete .box {
+        width: 300px;
+    }
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {}
